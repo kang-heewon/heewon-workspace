@@ -28,7 +28,8 @@ export const getBlogIndex = async (): Promise<
   database.results.forEach((page) => {
     if (
       page.properties.slug &&
-      page.properties.publishedAt &&
+      page.properties.published.type === "checkbox" &&
+      page.properties.published.checkbox &&
       page.properties.slug.type === "rich_text"
     ) {
       result.push({
