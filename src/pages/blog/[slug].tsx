@@ -55,6 +55,7 @@ export const getStaticProps: GetStaticProps<Props, Query> = async ({
       props: {
         redirect: "/blog",
       },
+      revalidate: 5,
     };
   }
 
@@ -64,6 +65,7 @@ export const getStaticProps: GetStaticProps<Props, Query> = async ({
     props: {
       post: postData,
     },
+    revalidate: 10,
   };
 };
 
