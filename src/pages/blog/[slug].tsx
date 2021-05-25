@@ -1,8 +1,11 @@
 import { Block, SelectOption } from "@notionhq/client/build/src/api-types";
+import { getBlogIndex, getPageData } from "@utils/notion";
+import { renderPost } from "@utils/renderer";
 import { GetStaticProps } from "next";
-import { useRouter } from "next/dist/client/router";
+import { useRouter } from "next/router";
 import { useEffect } from "react";
-import { getBlogIndex, getPageData } from "../../utils/notion";
+
+const listTypes = new Set(["bulleted_list", "numbered_list"]);
 
 type Query = {
   slug: string;
@@ -25,7 +28,20 @@ export default function Blog({ post, redirect }: Props) {
     }
   }, [redirect, post]);
 
-  return <>{post?.title}</>;
+  if (!post) {
+    return <div></div>;
+  }
+  return (
+    <>
+      <div>
+        <h1>{post.title ?? ""}</h1>
+
+        <hr />
+
+        {renderPost(post.content)}
+      </div>
+    </>
+  );
 }
 
 export const getStaticProps: GetStaticProps<Props, Query> = async ({
