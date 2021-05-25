@@ -18,13 +18,13 @@ export const getPageData = async (pageId: string) => {
 };
 
 export const getBlogIndex = async (): Promise<
-  { id: string; slug: string }[]
+  { id: string; slug: string; title: string }[]
 > => {
   const notionClient = getClient();
   const database = await notionClient.databases.query({
     database_id: process.env.INDEX_DATABASE_ID ?? "",
   });
-  const result: { id: string; slug: string }[] = [];
+  const result: { id: string; slug: string; title: string }[] = [];
   database.results.forEach((page) => {
     if (
       page.properties.slug &&
@@ -34,6 +34,10 @@ export const getBlogIndex = async (): Promise<
       result.push({
         id: page.id,
         slug: page.properties.slug.rich_text[0].plain_text,
+        title:
+          page.properties.Name.type === "title"
+            ? page.properties.Name.title?.[0].plain_text
+            : "",
       });
     }
   });

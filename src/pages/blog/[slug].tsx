@@ -19,7 +19,7 @@ type Props = {
   };
 };
 
-export default function Blog({ post, redirect }: Props) {
+export default function Article({ post, redirect }: Props) {
   const { replace } = useRouter();
 
   useEffect(() => {
