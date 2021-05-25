@@ -38,7 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@notionhq/client", "npm:0.1.7"],
-            ["@types/node", "npm:15.6.0"],
+            ["@types/node", "npm:15.6.1"],
             ["@types/react", "npm:17.0.6"],
             ["next", "virtual:b2a9f90303ac2ba8f1ad29081e6fd7b740fc8b4e985ec4e02e1e194882a2ecedd287cc2d9d24c6ec0c42d44e65c24bf19d922f662afcc76e484bb6bcebbeee4b#npm:10.2.2"],
             ["react", "npm:17.0.2"],
@@ -317,6 +317,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-node-npm-15.6.0-2f2269856c-54515155db.zip/node_modules/@types/node/",
           "packageDependencies": [
             ["@types/node", "npm:15.6.0"]
+          ],
+          "linkType": "HARD",
+        }],
+        ["npm:15.6.1", {
+          "packageLocation": "./.yarn/cache/@types-node-npm-15.6.1-1a0b9c8653-07b3855bc0.zip/node_modules/@types/node/",
+          "packageDependencies": [
+            ["@types/node", "npm:15.6.1"]
           ],
           "linkType": "HARD",
         }]
@@ -1783,7 +1790,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["heewon", "workspace:."],
             ["@notionhq/client", "npm:0.1.7"],
-            ["@types/node", "npm:15.6.0"],
+            ["@types/node", "npm:15.6.1"],
             ["@types/react", "npm:17.0.6"],
             ["next", "virtual:b2a9f90303ac2ba8f1ad29081e6fd7b740fc8b4e985ec4e02e1e194882a2ecedd287cc2d9d24c6ec0c42d44e65c24bf19d922f662afcc76e484bb6bcebbeee4b#npm:10.2.2"],
             ["react", "npm:17.0.2"],

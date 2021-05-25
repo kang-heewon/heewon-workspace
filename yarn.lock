@@ -213,10 +213,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:^15.6.0":
+"@types/node@npm:*":
   version: 15.6.0
   resolution: "@types/node@npm:15.6.0"
   checksum: 54515155db4f5d18e36725dafa477e0cee664b5a807560a026692c2c2251034675d9ef55a15bc44b7694a4a2e4866b9ca063872915b34a0564ab955b0da101eb
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^15.6.1":
+  version: 15.6.1
+  resolution: "@types/node@npm:15.6.1"
+  checksum: 07b3855bc0a1ba2215455a3ef4ed5e88711321b3cdc0ba1ea0286f6facbdf61530970b9fa7eec79eb1d46231f986c21ef3b7c1f1e0c365cf1b887d76b0addb86
   languageName: node
   linkType: hard
 
@@ -1481,7 +1488,7 @@ fsevents@~2.3.1:
   resolution: "heewon@workspace:."
   dependencies:
     "@notionhq/client": ^0.1.7
-    "@types/node": ^15.6.0
+    "@types/node": ^15.6.1
     "@types/react": ^17.0.6
     next: 10.2.2
     react: 17.0.2
