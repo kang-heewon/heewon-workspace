@@ -5,8 +5,6 @@ import { GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 
-const listTypes = new Set(["bulleted_list", "numbered_list"]);
-
 type Query = {
   slug: string;
 };
